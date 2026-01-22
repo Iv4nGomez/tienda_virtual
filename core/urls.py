@@ -10,5 +10,9 @@ urlpatterns = [
 
     path('tienda/compra/', ver_productos_tienda.as_view(), name='ver_producto_tienda'),
     path('tienda/checkout/<int:pk>', checkout, name='checkout'),
-    path('tienda/informes', informes, name='informes')
+    path('tienda/informes', informes, name='informes'),
+
+    path('tienda/register', RegistroView.as_view(), name='register'),
+    
+    path('tienda/informe/compra/detalle/<int:pk>', detailCompra.as_view(), name='detalle_compra' )
 ]
